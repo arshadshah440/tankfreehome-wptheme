@@ -1,0 +1,123 @@
+/**
+ * Tank Free Home - About page
+ * Trust stats, values grid and credentials panel.
+ * The page header, Our Story, Services and Testimonials sections all reuse
+ * component styles already defined in home.css (loaded alongside this file).
+ */
+
+/* ==========================================================================
+   1. Trust stats
+   ========================================================================== */
+
+.tfh-about-stats {
+	background: var(--tfh-grey-50);
+}
+
+.tfh-about-stats__row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--tfh-space-12);
+}
+
+.tfh-about-stats__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--tfh-space-2);
+	text-align: center;
+}
+
+.tfh-about-stats__value {
+	color: var(--tfh-accent);
+	font-size: var(--tfh-fs-display);
+	font-weight: var(--tfh-fw-bold);
+	line-height: 1.1;
+}
+
+.tfh-about-stats__label {
+	color: var(--tfh-grey-500);
+	font-weight: var(--tfh-fw-medium);
+}
+
+/* ==========================================================================
+   2. Values
+   ========================================================================== */
+
+.tfh-about-values__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--tfh-space-6);
+}
+
+@media (max-width: 1024px) {
+	.tfh-about-values__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 560px) {
+	.tfh-about-values__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ==========================================================================
+   3. Credentials
+   ========================================================================== */
+
+.tfh-credentials {
+	background: var(--tfh-navy-darkest);
+	color: var(--tfh-on-dark-70);
+}
+
+.tfh-credentials .tfh-heading {
+	color: var(--tfh-white);
+}
+
+.tfh-credentials__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--tfh-space-8);
+}
+
+.tfh-credentials__item {
+	text-align: center;
+}
+
+.tfh-credentials__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	margin: 0 auto var(--tfh-space-4);
+	border-radius: var(--tfh-radius-md);
+	background: rgba(255, 255, 255, 0.08);
+	color: var(--tfh-accent);
+}
+
+.tfh-credentials__title {
+	margin-bottom: var(--tfh-space-2);
+	color: var(--tfh-white);
+	font-size: var(--tfh-fs-h4);
+}
+
+.tfh-credentials__text {
+	margin: 0;
+	color: var(--tfh-on-dark-70);
+	font-size: var(--tfh-fs-sm);
+	line-height: var(--tfh-lh-body);
+}
+
+@media (max-width: 1024px) {
+	.tfh-credentials__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 560px) {
+	.tfh-credentials__grid {
+		grid-template-columns: 1fr;
+	}
+}

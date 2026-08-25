@@ -1,0 +1,536 @@
+{
+  "key": "group_tfh_sections",
+  "title": "Site Sections",
+  "fields": [
+    {
+      "key": "field_tfh_home_tab_why",
+      "label": "Why Choose Us",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_why_enable",
+      "label": "Show this section",
+      "name": "why_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "The dark navy panel. Shown on the homepage, the Service Listing page, and every single Service page.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_why_eyebrow",
+      "label": "Eyebrow",
+      "name": "why_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_why_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Why Choose Us",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_why_title",
+      "label": "Title",
+      "name": "why_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_why_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Your Best Choice for Tankless Water Heating",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_why_title_highlight",
+      "label": "Highlighted words",
+      "name": "why_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_why_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_why_badge_value",
+      "label": "Badge value",
+      "name": "why_badge_value",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_why_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "25+",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_why_badge_label",
+      "label": "Badge label",
+      "name": "why_badge_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_why_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Years of Experience",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_why_image",
+      "label": "Photo",
+      "name": "why_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Full-width photo.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_why_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "return_format": "array",
+      "library": "all",
+      "mime_types": "jpg,jpeg,png,webp",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_tfh_why_items",
+      "label": "Feature columns",
+      "name": "why_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Specialized Expertise, Quality Workmanship, Transparent Pricing.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_why_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 4,
+      "collapsed": "field_tfh_why_item_title",
+      "button_label": "Add column",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_why_item_icon",
+          "label": "Icon",
+          "name": "icon",
+          "aria-label": "",
+          "type": "select",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "25", "class": "", "id": "" },
+          "choices": {
+            "award": "Award",
+            "shield-check": "Shield Check",
+            "tag": "Tag",
+            "shield": "Shield",
+            "headset": "Headset",
+            "users": "Users",
+            "bolt": "Bolt",
+            "wrench": "Wrench",
+            "gauge": "Gauge",
+            "star": "Star"
+          },
+          "default_value": "award",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": ""
+        },
+        {
+          "key": "field_tfh_why_item_title",
+          "label": "Title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "35", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Specialized Expertise",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_why_item_text",
+          "label": "Text",
+          "name": "text",
+          "aria-label": "",
+          "type": "textarea",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "40", "class": "", "id": "" },
+          "default_value": "",
+          "rows": 2,
+          "placeholder": "",
+          "new_lines": "br"
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_sections_tab_process",
+      "label": "Our Process",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_process_enable",
+      "label": "Show this section",
+      "name": "process_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "Shown on the Service Listing page and every single Service page.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_process_eyebrow",
+      "label": "Eyebrow",
+      "name": "process_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_process_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Our Process",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_process_title",
+      "label": "Title",
+      "name": "process_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_process_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "How It Works",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_process_title_highlight",
+      "label": "Highlighted words",
+      "name": "process_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_process_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_process_intro",
+      "label": "Intro text",
+      "name": "process_intro",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_process_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+    {
+      "key": "field_tfh_process_steps",
+      "label": "Steps",
+      "name": "process_steps",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_process_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 6,
+      "collapsed": "field_tfh_process_step_title",
+      "button_label": "Add step",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_process_step_icon",
+          "label": "Icon",
+          "name": "icon",
+          "aria-label": "",
+          "type": "select",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "20", "class": "", "id": "" },
+          "choices": {
+            "phone": "Phone",
+            "calendar-check": "Calendar Check",
+            "tool": "Tool",
+            "shield-check": "Shield Check",
+            "headset": "Headset",
+            "check": "Check"
+          },
+          "default_value": "phone",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": ""
+        },
+        {
+          "key": "field_tfh_process_step_title",
+          "label": "Title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "35", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_process_step_text",
+          "label": "Text",
+          "name": "text",
+          "aria-label": "",
+          "type": "textarea",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "45", "class": "", "id": "" },
+          "default_value": "",
+          "rows": 2,
+          "placeholder": "",
+          "new_lines": "br"
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_sections_tab_testimonials",
+      "label": "Testimonials",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_testimonials_enable",
+      "label": "Show this section",
+      "name": "testimonials_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "Shown on the homepage, the About Us page, and every single Service page.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_testimonials_eyebrow",
+      "label": "Eyebrow",
+      "name": "testimonials_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_testimonials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Testimonials",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_testimonials_title",
+      "label": "Title",
+      "name": "testimonials_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_testimonials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "What They Say About Us",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_testimonials_title_highlight",
+      "label": "Highlighted words",
+      "name": "testimonials_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_testimonials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_testimonials_count",
+      "label": "Number to show",
+      "name": "testimonials_count",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_testimonials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": 6,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "placeholder": "6",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_testimonials_note",
+      "label": "",
+      "name": "",
+      "aria-label": "",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_testimonials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "Quotes are pulled from <strong>Testimonials</strong> in the admin menu.",
+      "new_lines": "wpautop",
+      "esc_html": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "tfh-sections-settings"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Content for sections shared across multiple templates (homepage, Service Listing page, single Service pages) so it's edited from one place instead of drifting between pages.",
+  "show_in_rest": 0
+}

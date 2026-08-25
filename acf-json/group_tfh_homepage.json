@@ -1,0 +1,824 @@
+{
+  "key": "group_tfh_homepage",
+  "title": "Homepage Sections",
+  "fields": [
+    {
+      "key": "field_tfh_home_tab_hero",
+      "label": "Hero",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_hero_enable",
+      "label": "Show this section",
+      "name": "hero_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_hero_image",
+      "label": "Photo",
+      "name": "hero_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "The technician photo on the right of the hero.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_hero_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "return_format": "array",
+      "library": "all",
+      "mime_types": "jpg,jpeg,png,webp",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_tfh_hero_background",
+      "label": "Background photo (optional)",
+      "name": "hero_background",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "Optional. Sits behind the navy overlay at low opacity.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_hero_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "return_format": "array",
+      "library": "all",
+      "mime_types": "jpg,jpeg,png,webp",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_tfh_hero_eyebrow",
+      "label": "Eyebrow (optional)",
+      "name": "hero_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_hero_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_hero_title",
+      "label": "Title",
+      "name": "hero_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_hero_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Tankless Hot Water You Can Rely On",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_hero_text",
+      "label": "Description",
+      "name": "hero_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_hero_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "rows": 3,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+    {
+      "key": "field_tfh_hero_button",
+      "label": "Button",
+      "name": "hero_button",
+      "aria-label": "",
+      "type": "link",
+      "instructions": "Default: \"Get Started\".",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_hero_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "return_format": "array"
+    },
+    {
+      "key": "field_tfh_hero_stats",
+      "label": "Stats",
+      "name": "hero_stats",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "e.g. \"1200+ Happy Customer\", \"600+ Work Completed\".",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_hero_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "table",
+      "pagination": 0,
+      "min": 0,
+      "max": 4,
+      "collapsed": "",
+      "button_label": "Add stat",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_hero_stat_value",
+          "label": "Value",
+          "name": "value",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "40", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "1200+",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_hero_stat_label",
+          "label": "Label",
+          "name": "label",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "60", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Happy Customer",
+          "prepend": "",
+          "append": ""
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_home_tab_about",
+      "label": "About",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_about_enable",
+      "label": "Show this section",
+      "name": "about_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_about_image",
+      "label": "Photo",
+      "name": "about_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "return_format": "array",
+      "library": "all",
+      "mime_types": "jpg,jpeg,png,webp",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_tfh_about_eyebrow",
+      "label": "Eyebrow",
+      "name": "about_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "About Us",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_title",
+      "label": "Title",
+      "name": "about_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "75", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Your Trusted Partner in Tankless Water Heating",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_title_highlight",
+      "label": "Highlighted words",
+      "name": "about_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "Trailing words accented in the theme colour. 0 disables.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "25", "class": "", "id": "" },
+      "default_value": 2,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "2",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_features",
+      "label": "Feature rows",
+      "name": "about_features",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "The stacked rows below the title (Proven Expertise, Fast Dependable Service, Honest Upfront Pricing).",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 5,
+      "collapsed": "field_tfh_about_feature_title",
+      "button_label": "Add feature",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_about_feature_icon",
+          "label": "Icon",
+          "name": "icon",
+          "aria-label": "",
+          "type": "image",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "50", "class": "", "id": "" },
+          "return_format": "array",
+          "library": "all",
+          "mime_types": "jpg,jpeg,png,webp,svg",
+          "preview_size": "medium"
+        },
+        {
+          "key": "field_tfh_about_feature_title",
+          "label": "Title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "35", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Proven Expertise",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_about_feature_text",
+          "label": "Text",
+          "name": "text",
+          "aria-label": "",
+          "type": "textarea",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "40", "class": "", "id": "" },
+          "default_value": "",
+          "rows": 2,
+          "placeholder": "",
+          "new_lines": "br"
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_home_tab_expertise",
+      "label": "Expertise",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_expertise_enable",
+      "label": "Show this section",
+      "name": "expertise_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_expertise_eyebrow",
+      "label": "Eyebrow",
+      "name": "expertise_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Expertise",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_expertise_title",
+      "label": "Title",
+      "name": "expertise_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Expertise in Tankless Water Heating",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_expertise_title_highlight",
+      "label": "Highlighted words",
+      "name": "expertise_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_expertise_image",
+      "label": "Photo",
+      "name": "expertise_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "return_format": "array",
+      "library": "all",
+      "mime_types": "jpg,jpeg,png,webp",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_tfh_expertise_badge_value",
+      "label": "Badge value",
+      "name": "expertise_badge_value",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "25", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "468+",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_expertise_badge_label",
+      "label": "Badge label",
+      "name": "expertise_badge_label",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "25", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Tankless Systems Installed",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_expertise_badge_text",
+      "label": "Description",
+      "name": "expertise_badge_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Shown under the photo.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "rows": 3,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+    {
+      "key": "field_tfh_expertise_items",
+      "label": "Progress rows",
+      "name": "expertise_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Shown as labelled progress bars in the navy panel.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_expertise_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "table",
+      "pagination": 0,
+      "min": 0,
+      "max": 6,
+      "collapsed": "",
+      "button_label": "Add row",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_expertise_item_label",
+          "label": "Label",
+          "name": "label",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "70", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Tankless Installation",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_expertise_item_percent",
+          "label": "Percent",
+          "name": "percent",
+          "aria-label": "",
+          "type": "number",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "30", "class": "", "id": "" },
+          "default_value": 90,
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "placeholder": "90",
+          "prepend": "",
+          "append": "%"
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_home_tab_services",
+      "label": "Services",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_services_enable",
+      "label": "Show this section",
+      "name": "services_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_services_eyebrow",
+      "label": "Eyebrow",
+      "name": "services_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_services_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Our Services",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_services_title",
+      "label": "Title",
+      "name": "services_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_services_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Reliable Tankless Water Heater Services We Provide",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_services_count",
+      "label": "Number of services",
+      "name": "services_count",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_services_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": 6,
+      "min": 1,
+      "max": 12,
+      "step": 1,
+      "placeholder": "6",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_services_category",
+      "label": "Limit to category",
+      "name": "services_category",
+      "aria-label": "",
+      "type": "taxonomy",
+      "instructions": "Optional. Leave empty to show the most recent services.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_services_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "taxonomy": "tfh_service_cat",
+      "add_term": 0,
+      "save_terms": 0,
+      "load_terms": 0,
+      "return_format": "id",
+      "field_type": "select",
+      "allow_null": 1,
+      "multiple": 0
+    },
+    {
+      "key": "field_tfh_services_note",
+      "label": "",
+      "name": "",
+      "aria-label": "",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_services_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "Cards are pulled from <strong>Services</strong> in the admin menu.",
+      "new_lines": "wpautop",
+      "esc_html": 0
+    },
+
+    {
+      "key": "field_tfh_home_tab_projects",
+      "label": "Projects",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_projects_enable",
+      "label": "Show this section",
+      "name": "projects_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_projects_eyebrow",
+      "label": "Eyebrow",
+      "name": "projects_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_projects_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Projects",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_projects_title",
+      "label": "Title",
+      "name": "projects_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_projects_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Latest Tankless Projects",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_projects_text",
+      "label": "Supporting text",
+      "name": "projects_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_projects_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+    {
+      "key": "field_tfh_projects_button",
+      "label": "\"See All\" button",
+      "name": "projects_button",
+      "aria-label": "",
+      "type": "link",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_projects_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "return_format": "array"
+    },
+    {
+      "key": "field_tfh_projects_count",
+      "label": "Number of projects",
+      "name": "projects_count",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_projects_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "50", "class": "", "id": "" },
+      "default_value": 3,
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "placeholder": "2",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_projects_note",
+      "label": "",
+      "name": "",
+      "aria-label": "",
+      "type": "message",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_projects_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "Cards are pulled from <strong>Projects</strong> in the admin menu.",
+      "new_lines": "wpautop",
+      "esc_html": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-homepage.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Content for every section of the homepage template, in order. Why Choose Us and Testimonials are shared across templates and edited from Theme Settings -> Site Sections instead.",
+  "show_in_rest": 0
+}

@@ -1,0 +1,123 @@
+/**
+ * Tank Free Home - Service Listing page
+ * Pagination controls and the "Our Process" steps.
+ * Loaded alongside home.css, which supplies the shared page header,
+ * service card, and "Why Choose Us" styles this template also relies on.
+ */
+
+/* ==========================================================================
+   1. Pagination
+   ========================================================================== */
+
+.tfh-pagination {
+	display: flex;
+	justify-content: center;
+	margin-top: var(--tfh-space-12);
+}
+
+.tfh-pagination .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 44px;
+	height: 44px;
+	margin: 0 var(--tfh-space-1);
+	padding: 0 var(--tfh-space-3);
+	border-radius: var(--tfh-radius-circle);
+	color: var(--tfh-ink);
+	font-weight: var(--tfh-fw-medium);
+	transition: background-color var(--tfh-transition), color var(--tfh-transition);
+}
+
+.tfh-pagination a.page-numbers:hover {
+	background: var(--tfh-accent-10);
+	color: var(--tfh-accent);
+}
+
+.tfh-pagination .page-numbers.current {
+	background: var(--tfh-accent);
+	color: var(--tfh-white);
+}
+
+.tfh-pagination .page-numbers.dots {
+	color: var(--tfh-grey-300);
+}
+
+.tfh-pagination .page-numbers.prev,
+.tfh-pagination .page-numbers.next {
+	background: var(--tfh-grey-50);
+}
+
+.tfh-pagination .page-numbers.prev:hover,
+.tfh-pagination .page-numbers.next:hover {
+	background: var(--tfh-accent);
+	color: var(--tfh-white);
+}
+
+/* ==========================================================================
+   2. Our Process
+   ========================================================================== */
+
+.tfh-process {
+	background: var(--tfh-grey-50);
+}
+
+.tfh-process__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--tfh-space-6);
+}
+
+.tfh-process__step {
+	position: relative;
+	padding: var(--tfh-space-8) var(--tfh-space-6);
+	border-radius: var(--tfh-radius-lg);
+	background: var(--tfh-white);
+	text-align: center;
+}
+
+.tfh-process__number {
+	position: absolute;
+	top: var(--tfh-space-5);
+	right: var(--tfh-space-6);
+	color: var(--tfh-grey-100);
+	font-size: var(--tfh-fs-h2);
+	font-weight: var(--tfh-fw-bold);
+	line-height: 1;
+}
+
+.tfh-process__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 48px;
+	height: 48px;
+	margin: 0 auto var(--tfh-space-4);
+	border-radius: var(--tfh-radius-circle);
+	background: var(--tfh-accent-10);
+	color: var(--tfh-accent);
+}
+
+.tfh-process__title {
+	margin-bottom: var(--tfh-space-2);
+	font-size: var(--tfh-fs-h4);
+}
+
+.tfh-process__text {
+	margin: 0;
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-sm);
+	line-height: var(--tfh-lh-body);
+}
+
+@media (max-width: 1024px) {
+	.tfh-process__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 560px) {
+	.tfh-process__grid {
+		grid-template-columns: 1fr;
+	}
+}

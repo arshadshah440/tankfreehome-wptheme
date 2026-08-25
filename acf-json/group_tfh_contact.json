@@ -1,0 +1,187 @@
+{
+  "key": "group_tfh_contact",
+  "title": "Contact Page Sections",
+  "fields": [
+    {
+      "key": "field_tfh_contact_tab_header",
+      "label": "Page Header",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_contact_header_subtitle",
+      "label": "Subtitle",
+      "name": "contact_header_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Shown under the page title in the banner. The title itself comes from the page's own title.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+
+    {
+      "key": "field_tfh_contact_tab_info",
+      "label": "Quick Info Cards",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_contact_info_enable",
+      "label": "Show this section",
+      "name": "contact_info_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "Pulls phone, email, address and hours from Theme Settings → Brand & Contact.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+
+    {
+      "key": "field_tfh_contact_tab_form",
+      "label": "Contact Form",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_contact_form_enable",
+      "label": "Show this section",
+      "name": "contact_form_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_contact_form_eyebrow",
+      "label": "Eyebrow",
+      "name": "contact_form_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_contact_form_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Get In Touch",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_contact_form_title",
+      "label": "Title",
+      "name": "contact_form_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_contact_form_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Send Us a Message",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_contact_form_title_highlight",
+      "label": "Highlighted words",
+      "name": "contact_form_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_contact_form_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_contact_form_text",
+      "label": "Intro text",
+      "name": "contact_form_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_contact_form_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-contact.php"
+      }
+    ]
+  ],
+  "menu_order": 2,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Content for every section of the Contact Us page template, in order.",
+  "show_in_rest": 0
+}

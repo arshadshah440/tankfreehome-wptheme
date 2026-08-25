@@ -1,0 +1,41 @@
+/**
+ * Tank Free Home - Single Service page
+ * The "What's Included" checklist. Every other section on this template
+ * reuses component styles already defined in home.css and faq.css (both
+ * loaded alongside this file).
+ */
+
+.tfh-service-checklist {
+	background: var(--tfh-grey-50);
+}
+
+.tfh-service-checklist__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--tfh-space-4) var(--tfh-space-8);
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.tfh-service-checklist__grid li {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--tfh-space-3);
+	padding: var(--tfh-space-4) var(--tfh-space-5);
+	border-radius: var(--tfh-radius-md);
+	background: var(--tfh-white);
+}
+
+.tfh-service-checklist__grid li svg {
+	flex: 0 0 auto;
+	margin-top: 2px;
+	color: var(--tfh-accent);
+}
+
+@media (max-width: 640px) {
+	.tfh-service-checklist__grid {
+		grid-template-columns: 1fr;
+	}
+}

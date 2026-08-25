@@ -1,0 +1,563 @@
+{
+  "key": "group_tfh_location",
+  "title": "Location Page Sections",
+  "fields": [
+    {
+      "key": "field_tfh_loc_tab_header",
+      "label": "Page Header",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_loc_header_subtitle",
+      "label": "Subtitle",
+      "name": "location_header_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Shown under the page title in the banner. The title itself comes from the page's own title (e.g. \"California\").",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+
+    {
+      "key": "field_tfh_loc_tab_stats",
+      "label": "Trust Stats",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_loc_stats_enable",
+      "label": "Show this section",
+      "name": "location_stats_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_loc_stats_eyebrow",
+      "label": "Eyebrow",
+      "name": "location_stats_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Local Track Record",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_stats_title",
+      "label": "Title",
+      "name": "location_stats_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Trusted Across the State",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_stats_title_highlight",
+      "label": "Highlighted words",
+      "name": "location_stats_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_stats_items",
+      "label": "Stats",
+      "name": "location_stats_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "e.g. \"15+\" / \"Years Serving the Area\".",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "table",
+      "pagination": 0,
+      "min": 0,
+      "max": 4,
+      "collapsed": "",
+      "button_label": "Add stat",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_loc_stat_value",
+          "label": "Value",
+          "name": "value",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "40", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "15+",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_loc_stat_label",
+          "label": "Label",
+          "name": "label",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "60", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Years Serving the Area",
+          "prepend": "",
+          "append": ""
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_loc_tab_insights",
+      "label": "Local Insight",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_loc_insights_enable",
+      "label": "Show this section",
+      "name": "location_insights_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_loc_insights_eyebrow",
+      "label": "Eyebrow",
+      "name": "location_insights_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_insights_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Local Insight",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_insights_title",
+      "label": "Title",
+      "name": "location_insights_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_insights_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "What Local Homes Need",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_insights_title_highlight",
+      "label": "Highlighted words",
+      "name": "location_insights_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_insights_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_insights_intro",
+      "label": "Intro text",
+      "name": "location_insights_intro",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_insights_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+    {
+      "key": "field_tfh_loc_insights_items",
+      "label": "Insights",
+      "name": "location_insights_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_insights_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 4,
+      "collapsed": "field_tfh_loc_insight_title",
+      "button_label": "Add insight",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_loc_insight_icon",
+          "label": "Icon",
+          "name": "icon",
+          "aria-label": "",
+          "type": "select",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "20", "class": "", "id": "" },
+          "choices": {
+            "thermometer": "Thermometer",
+            "droplet": "Droplet",
+            "settings": "Settings",
+            "home": "Home",
+            "gauge": "Gauge",
+            "inspection": "Inspection"
+          },
+          "default_value": "thermometer",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": ""
+        },
+        {
+          "key": "field_tfh_loc_insight_title",
+          "label": "Title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "35", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_loc_insight_text",
+          "label": "Text",
+          "name": "text",
+          "aria-label": "",
+          "type": "textarea",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "45", "class": "", "id": "" },
+          "default_value": "",
+          "rows": 2,
+          "placeholder": "",
+          "new_lines": "br"
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_loc_tab_area",
+      "label": "Service Area",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_loc_area_enable",
+      "label": "Show this section",
+      "name": "location_area_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_loc_area_eyebrow",
+      "label": "Eyebrow",
+      "name": "location_area_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_area_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Service Area",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_area_title",
+      "label": "Title",
+      "name": "location_area_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_area_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Cities We Serve",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_area_title_highlight",
+      "label": "Highlighted words",
+      "name": "location_area_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_area_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_loc_area_cities",
+      "label": "Cities",
+      "name": "location_area_cities",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_area_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "table",
+      "pagination": 0,
+      "min": 0,
+      "max": 12,
+      "collapsed": "",
+      "button_label": "Add city",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_loc_area_city",
+          "label": "City",
+          "name": "city",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "100", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_loc_tab_faq",
+      "label": "FAQ",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_loc_faq_enable",
+      "label": "Show this section",
+      "name": "location_faq_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_loc_faq_items",
+      "label": "Questions",
+      "name": "location_faq_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_loc_faq_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 8,
+      "collapsed": "field_tfh_loc_faq_question",
+      "button_label": "Add question",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_loc_faq_question",
+          "label": "Question",
+          "name": "question",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "100", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_loc_faq_answer",
+          "label": "Answer",
+          "name": "answer",
+          "aria-label": "",
+          "type": "textarea",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "100", "class": "", "id": "" },
+          "default_value": "",
+          "rows": 3,
+          "placeholder": "",
+          "new_lines": "br"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-location.php"
+      }
+    ]
+  ],
+  "menu_order": 6,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Content for the Location page template. Services, Why Choose Us, and Testimonials are reused site-wide sections and aren't duplicated here.",
+  "show_in_rest": 0
+}

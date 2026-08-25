@@ -1,0 +1,662 @@
+{
+  "key": "group_tfh_about",
+  "title": "About Page Sections",
+  "fields": [
+    {
+      "key": "field_tfh_about_tab_header",
+      "label": "Page Header",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_about_header_subtitle",
+      "label": "Subtitle",
+      "name": "about_header_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Shown under the page title in the banner. The title itself comes from the page's own title.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+
+    {
+      "key": "field_tfh_about_tab_story",
+      "label": "Our Story",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_about_story_enable",
+      "label": "Show this section",
+      "name": "about_story_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_about_story_eyebrow",
+      "label": "Eyebrow",
+      "name": "about_story_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_story_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Our Story",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_story_title",
+      "label": "Title",
+      "name": "about_story_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_story_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Built on Reliable Tankless Expertise",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_story_title_highlight",
+      "label": "Highlighted words",
+      "name": "about_story_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "Number of trailing words to accent in red. 0 disables.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_story_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_story_text",
+      "label": "Story text",
+      "name": "about_story_text",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Use a blank line for a new paragraph.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_story_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 6,
+      "placeholder": "",
+      "new_lines": ""
+    },
+    {
+      "key": "field_tfh_about_story_image",
+      "label": "Photo",
+      "name": "about_story_image",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_story_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "return_format": "array",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+
+    {
+      "key": "field_tfh_about_tab_stats",
+      "label": "Trust Stats",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_about_stats_enable",
+      "label": "Show this section",
+      "name": "about_stats_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_about_stats_eyebrow",
+      "label": "Eyebrow",
+      "name": "about_stats_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Our Track Record",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_stats_title",
+      "label": "Title",
+      "name": "about_stats_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Trusted by Homeowners Across the Region",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_stats_title_highlight",
+      "label": "Highlighted words",
+      "name": "about_stats_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_stats_items",
+      "label": "Stats",
+      "name": "about_stats_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "e.g. \"25+\" / \"Years of Experience\".",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_stats_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "table",
+      "pagination": 0,
+      "min": 0,
+      "max": 4,
+      "collapsed": "",
+      "button_label": "Add stat",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_about_stat_value",
+          "label": "Value",
+          "name": "value",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "40", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "25+",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_about_stat_label",
+          "label": "Label",
+          "name": "label",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "60", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Years of Experience",
+          "prepend": "",
+          "append": ""
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_about_tab_values",
+      "label": "Values",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_about_values_enable",
+      "label": "Show this section",
+      "name": "about_values_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_about_values_eyebrow",
+      "label": "Eyebrow",
+      "name": "about_values_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_values_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Our Values",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_values_title",
+      "label": "Title",
+      "name": "about_values_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_values_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "The Values Behind Every Job",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_values_title_highlight",
+      "label": "Highlighted words",
+      "name": "about_values_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_values_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_values_intro",
+      "label": "Intro text",
+      "name": "about_values_intro",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_values_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+    {
+      "key": "field_tfh_about_values_items",
+      "label": "Value cards",
+      "name": "about_values_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Honesty First, Quality Workmanship, Respect for Your Home, Reliability.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_values_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 4,
+      "collapsed": "field_tfh_about_value_title",
+      "button_label": "Add value",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_about_value_icon",
+          "label": "Icon",
+          "name": "icon",
+          "aria-label": "",
+          "type": "select",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "25", "class": "", "id": "" },
+          "choices": {
+            "shield-check": "Shield Check",
+            "tool": "Tool",
+            "home": "Home",
+            "clock": "Clock",
+            "award": "Award",
+            "shield": "Shield",
+            "users": "Users",
+            "tag": "Tag",
+            "headset": "Headset",
+            "star": "Star"
+          },
+          "default_value": "shield-check",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": ""
+        },
+        {
+          "key": "field_tfh_about_value_title",
+          "label": "Title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "35", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Honesty First",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_about_value_text",
+          "label": "Text",
+          "name": "text",
+          "aria-label": "",
+          "type": "textarea",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "40", "class": "", "id": "" },
+          "default_value": "",
+          "rows": 2,
+          "placeholder": "",
+          "new_lines": "br"
+        }
+      ]
+    },
+
+    {
+      "key": "field_tfh_about_tab_credentials",
+      "label": "Credentials",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_about_credentials_enable",
+      "label": "Show this section",
+      "name": "about_credentials_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_about_credentials_eyebrow",
+      "label": "Eyebrow",
+      "name": "about_credentials_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_credentials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Licensed & Insured",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_credentials_title",
+      "label": "Title",
+      "name": "about_credentials_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_credentials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Peace of Mind on Every Project",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_credentials_title_highlight",
+      "label": "Highlighted words",
+      "name": "about_credentials_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_credentials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_about_credentials_items",
+      "label": "Credential cards",
+      "name": "about_credentials_items",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Licensed & Insured, Certified Technicians, Warranty-Backed Installs, Locally Owned & Operated.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_about_credentials_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 4,
+      "collapsed": "field_tfh_about_credential_title",
+      "button_label": "Add credential",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_about_credential_icon",
+          "label": "Icon",
+          "name": "icon",
+          "aria-label": "",
+          "type": "select",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "25", "class": "", "id": "" },
+          "choices": {
+            "shield": "Shield",
+            "award": "Award",
+            "calendar-check": "Calendar Check",
+            "map-pin": "Map Pin",
+            "shield-check": "Shield Check",
+            "users": "Users",
+            "headset": "Headset",
+            "star": "Star"
+          },
+          "default_value": "shield",
+          "return_format": "value",
+          "multiple": 0,
+          "allow_null": 0,
+          "ui": 0,
+          "ajax": 0,
+          "placeholder": ""
+        },
+        {
+          "key": "field_tfh_about_credential_title",
+          "label": "Title",
+          "name": "title",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "35", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "Licensed & Insured",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_about_credential_text",
+          "label": "Text",
+          "name": "text",
+          "aria-label": "",
+          "type": "textarea",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "40", "class": "", "id": "" },
+          "default_value": "",
+          "rows": 2,
+          "placeholder": "",
+          "new_lines": "br"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-about.php"
+      }
+    ]
+  ],
+  "menu_order": 1,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Content for every section of the About Us page template, in order.",
+  "show_in_rest": 0
+}

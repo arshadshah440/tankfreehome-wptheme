@@ -1,0 +1,184 @@
+/**
+ * Tank Free Home - Blog listing and single post
+ * Loaded alongside home.css, which supplies the shared page header styles
+ * this template also relies on. Pagination reuses the .tfh-pagination /
+ * .page-numbers rules already defined globally in base.css.
+ */
+
+/* ==========================================================================
+   1. Blog listing grid + card
+   ========================================================================== */
+
+.tfh-blog__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--tfh-space-8);
+}
+
+.tfh-blog-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--tfh-radius-lg);
+	background: var(--tfh-white);
+	box-shadow: var(--tfh-shadow-sm);
+	overflow: hidden;
+	transition: box-shadow var(--tfh-transition), transform var(--tfh-transition);
+}
+
+.tfh-blog-card:hover {
+	box-shadow: var(--tfh-shadow-lg);
+	transform: translateY(-4px);
+}
+
+.tfh-blog-card__media {
+	display: block;
+}
+
+.tfh-blog-card__image {
+	width: 100%;
+	aspect-ratio: 8 / 5;
+	object-fit: cover;
+}
+
+.tfh-blog-card__body {
+	display: flex;
+	flex: 1 1 auto;
+	flex-direction: column;
+	padding: var(--tfh-space-6);
+}
+
+.tfh-blog-card__meta {
+	display: flex;
+	align-items: center;
+	gap: var(--tfh-space-2);
+	margin-bottom: var(--tfh-space-3);
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-xs);
+}
+
+.tfh-blog-card__meta .tfh-entry__meta-item:not(:last-child)::after {
+	content: "\2022";
+	margin-left: var(--tfh-space-2);
+	color: var(--tfh-grey-300);
+}
+
+.tfh-blog-card__title {
+	margin-bottom: var(--tfh-space-3);
+	font-size: var(--tfh-fs-h4);
+}
+
+.tfh-blog-card__title a {
+	color: inherit;
+}
+
+.tfh-blog-card__title a:hover {
+	color: var(--tfh-accent);
+}
+
+.tfh-blog-card__excerpt {
+	flex: 1 1 auto;
+	margin-bottom: var(--tfh-space-5);
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-sm);
+	line-height: var(--tfh-lh-body);
+}
+
+.tfh-blog-card__cta {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--tfh-space-2);
+	color: var(--tfh-accent);
+	font-size: var(--tfh-fs-sm);
+	font-weight: var(--tfh-fw-semibold);
+}
+
+.tfh-blog-card__cta svg {
+	transition: transform var(--tfh-transition);
+}
+
+.tfh-blog-card:hover .tfh-blog-card__cta svg {
+	transform: translateX(3px);
+}
+
+@media (max-width: 1024px) {
+	.tfh-blog__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 640px) {
+	.tfh-blog__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ==========================================================================
+   2. Single post
+   ========================================================================== */
+
+.tfh-single-post__thumb {
+	margin-bottom: var(--tfh-space-8);
+}
+
+.tfh-single-post__thumb img {
+	width: 100%;
+	border-radius: var(--tfh-radius-xl);
+	object-fit: cover;
+	aspect-ratio: 16 / 8;
+}
+
+.tfh-post-nav {
+	display: flex;
+	gap: var(--tfh-space-6);
+	justify-content: space-between;
+	margin-top: var(--tfh-space-12);
+	padding-top: var(--tfh-space-8);
+	border-top: var(--tfh-border);
+}
+
+.tfh-post-nav__link {
+	display: flex;
+	align-items: center;
+	gap: var(--tfh-space-2);
+	max-width: 45%;
+	color: var(--tfh-ink);
+}
+
+.tfh-post-nav__link svg {
+	flex: 0 0 auto;
+	color: var(--tfh-accent);
+}
+
+.tfh-post-nav__link--next {
+	margin-left: auto;
+	text-align: right;
+	flex-direction: row-reverse;
+}
+
+.tfh-post-nav__link small {
+	display: block;
+	margin-bottom: 2px;
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-xs);
+	font-weight: var(--tfh-fw-regular);
+	text-transform: uppercase;
+	letter-spacing: var(--tfh-ls-eyebrow);
+}
+
+.tfh-post-nav__link:hover {
+	color: var(--tfh-accent);
+}
+
+@media (max-width: 560px) {
+	.tfh-post-nav__link {
+		max-width: 100%;
+	}
+
+	.tfh-post-nav {
+		flex-direction: column;
+	}
+
+	.tfh-post-nav__link--next {
+		margin-left: 0;
+	}
+}

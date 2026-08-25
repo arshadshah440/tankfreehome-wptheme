@@ -1,0 +1,62 @@
+/**
+ * Tank Free Home - Privacy Policy page
+ * Intro line, table of contents, and numbered policy sections.
+ * Loaded alongside home.css, which supplies the shared page header styles
+ * this template also relies on. Section typography (h2, p, ul) intentionally
+ * reuses the site's default prose styles from base.css.
+ */
+
+.tfh-policy__intro {
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-lead);
+	line-height: var(--tfh-lh-loose);
+}
+
+.tfh-policy__toc {
+	margin: var(--tfh-space-8) 0 var(--tfh-space-12);
+	padding: var(--tfh-space-6) var(--tfh-space-8);
+	border-radius: var(--tfh-radius-lg);
+	background: var(--tfh-grey-50);
+}
+
+.tfh-policy__toc ol {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: var(--tfh-space-2) var(--tfh-space-8);
+	margin: 0;
+	padding-left: var(--tfh-space-6);
+}
+
+.tfh-policy__toc a {
+	color: var(--tfh-ink);
+	font-weight: var(--tfh-fw-medium);
+}
+
+.tfh-policy__toc a:hover {
+	color: var(--tfh-accent);
+}
+
+.tfh-policy__section {
+	padding-top: var(--tfh-space-10);
+	border-top: 1px solid var(--tfh-grey-100);
+	margin-top: 15px;
+}
+
+.tfh-policy__section:first-child {
+	padding-top: 0;
+	border-top: 0;
+}
+
+.tfh-policy__section h2 {
+	font-size: var(--tfh-fs-h3);
+}
+
+.tfh-policy__section ul {
+	padding-left: var(--tfh-space-6);
+}
+
+@media (max-width: 640px) {
+	.tfh-policy__toc ol {
+		grid-template-columns: 1fr;
+	}
+}

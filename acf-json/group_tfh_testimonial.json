@@ -1,0 +1,72 @@
+{
+    "key": "group_tfh_testimonial",
+    "title": "Testimonial Details",
+    "fields": [
+        {
+            "key": "field_tfh_testimonial_role",
+            "label": "Role / description",
+            "name": "testimonial_role",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Shown under the person's name.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "Homeowner",
+            "prepend": "", "append": ""
+        },
+        {
+            "key": "field_tfh_testimonial_rating",
+            "label": "Rating",
+            "name": "testimonial_rating",
+            "aria-label": "",
+            "type": "number",
+            "instructions": "Out of 5.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" },
+            "default_value": 5,
+            "min": 0,
+            "max": 5,
+            "step": 0.5,
+            "placeholder": "5",
+            "prepend": "", "append": ""
+        },
+        {
+            "key": "field_tfh_testimonial_quote",
+            "label": "Quote",
+            "name": "testimonial_quote",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "100", "class": "", "id": "" },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 4,
+            "placeholder": "",
+            "new_lines": "br"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "tfh_testimonial"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "Extra fields shown on each Testimonial entry.",
+    "show_in_rest": 0
+}

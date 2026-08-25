@@ -1,0 +1,153 @@
+/**
+ * Tank Free Home - Design Tokens
+ *
+ * Central source of truth for colors, type, spacing and other primitives.
+ * Every other stylesheet in this theme reads from these custom properties
+ * instead of hard-coding values, so a brand refresh only touches this file
+ * (or the color pickers under Theme Settings → Brand & Contact).
+ */
+
+:root {
+	/* ------------------------------------------------------------------
+	 * Brand colors
+	 * ---------------------------------------------------------------- */
+	--tfh-accent: #F60101;         /* Primary red - buttons, icons, progress fills */
+	--tfh-accent-dark: #D10101;    /* hover / pressed state */
+	--tfh-accent-darker: #A60101;
+	--tfh-accent-10: rgba(246, 1, 1, 0.1);
+	--tfh-accent-20: rgba(246, 1, 1, 0.2);
+
+	--tfh-header-bg: #061F51;      /* Site header background */
+	--tfh-navy: #0B2A4A;           /* Secondary navy - header text, dark sections, footer */
+	--tfh-navy-dark: #071B31;      /* hover state */
+	--tfh-navy-darker: #041526;
+	--tfh-navy-darkest: #141A25;
+	--tfh-navy-20: rgba(11, 42, 74, 0.2);
+
+	--tfh-gold: #FFB020;    
+	--tfh-orange: #FF772B;       /* Star ratings */
+	--tfh-eyebrow-border: #5C6DFF; /* Vertical rule before section eyebrows */
+
+	/* ------------------------------------------------------------------
+	 * Neutrals
+	 * ---------------------------------------------------------------- */
+	--tfh-black: #000000;
+	--tfh-ink: #101E30;             /* heading ink */
+	--tfh-slate: #1E2B39;           /* input text  */
+	--tfh-grey-500: #5C6B7A;        /* body copy */
+	--tfh-grey-300: #A6B2BF;
+	--tfh-grey-100: #E6EAF0;
+	--tfh-grey-50: #F3F6FA;
+	--tfh-grey-main: #838383;
+	--tfh-white: #FFFFFF;
+
+	/* Alpha helpers used on dark (navy) surfaces */
+	--tfh-on-dark: rgba(255, 255, 255, 1);
+	--tfh-on-dark-70: rgba(255, 255, 255, 0.7);
+	--tfh-on-dark-40: rgba(255, 255, 255, 0.4);
+	--tfh-hairline: rgba(255, 255, 255, 0.14);
+
+	/* ------------------------------------------------------------------
+	 * Semantic aliases
+	 * ---------------------------------------------------------------- */
+	--tfh-body-bg: var(--tfh-white);
+	--tfh-body-color: var(--tfh-grey-500);
+	--tfh-heading-color: var(--tfh-ink);
+	--tfh-accent-contrast: var(--tfh-white);
+	--tfh-link: var(--tfh-accent);
+	--tfh-link-hover: var(--tfh-navy);
+	--tfh-focus-ring: var(--tfh-accent);
+
+	/* ------------------------------------------------------------------
+	 * Typography  (Poppins)
+	 * ---------------------------------------------------------------- */
+	--tfh-font-sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, "Helvetica Neue", Arial, sans-serif;
+	--tfh-font-heading: var(--tfh-font-sans);
+	--tfh-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+	--tfh-fw-regular: 400;
+	--tfh-fw-medium: 500;
+	--tfh-fw-semibold: 600;
+	--tfh-fw-bold: 700;
+
+	/* Fluid type scale - min value at 360px, max at 1440px */
+	--tfh-fs-display: clamp(2.25rem, 1.3rem + 4.7vw, 3.75rem);  /* 36 -> 60 */
+	--tfh-fs-h1: clamp(2.375rem, 1.875rem + 2.22vw, 3.875rem);   /* 38 -> 62 */
+	--tfh-fs-h2: clamp(2rem, 1.667rem + 1.48vw, 3rem);           /* 32 -> 48 */
+	--tfh-fs-h3: clamp(1.375rem, 1.1rem + 1.4vw, 1.75rem);       /* 22 -> 28 */
+	--tfh-fs-h4: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);        /* 18 -> 22 */
+	--tfh-fs-h5: 1.25rem;                                         /* 20 - footer col titles */
+	--tfh-fs-h6: 1.0625rem;
+	--tfh-fs-lead: 1.125rem;
+	--tfh-fs-body: 1rem;                                          /* 16 */
+	--tfh-fs-sm: 0.875rem;                                        /* 14 - nav links */
+	--tfh-fs-xs: 0.75rem;                                         /* 12 - meta text */
+	--tfh-fs-eyebrow: 0.9375rem;                                  /* 15 - section eyebrow */
+
+	--tfh-lh-tight: 1;
+	--tfh-lh-heading: 1.2;
+	--tfh-lh-snug: 1.45;
+	--tfh-lh-body: 1.65;
+	--tfh-lh-loose: 1.8;
+
+	--tfh-ls-display: -0.01em;
+	--tfh-ls-heading: -0.01em;
+	--tfh-ls-tight: 0;
+	--tfh-ls-eyebrow: 0.06em;    /* wide-tracked uppercase eyebrow */
+
+	/* ------------------------------------------------------------------
+	 * Layout
+	 * ---------------------------------------------------------------- */
+	--tfh-container: 1280px;
+	--tfh-container-narrow: 900px;
+	--tfh-gutter: clamp(1.25rem, 0.4rem + 3.6vw, 5rem); /* 20 -> 80 */
+	--tfh-topbar-height: 44px;
+	--tfh-header-height: 84px;
+
+	/* ------------------------------------------------------------------
+	 * Spacing scale (4px base)
+	 * ---------------------------------------------------------------- */
+	--tfh-space-1: 0.25rem;
+	--tfh-space-2: 0.5rem;
+	--tfh-space-3: 0.75rem;
+	--tfh-space-4: 1rem;
+	--tfh-space-5: 1.25rem;
+	--tfh-space-6: 1.5rem;
+	--tfh-space-8: 2rem;
+	--tfh-space-10: 2.5rem;
+	--tfh-space-12: 3rem;
+	--tfh-space-16: 4rem;
+	--tfh-space-20: 5rem;
+	--tfh-space-24: 6rem;
+
+	/* ------------------------------------------------------------------
+	 * Radii, borders, shadows, motion
+	 * ---------------------------------------------------------------- */
+	--tfh-radius-sm: 8px;
+	--tfh-radius-md: 14px;
+	--tfh-radius-lg: 20px;
+	--tfh-radius-xl: 28px;
+	--tfh-radius-pill: 50px;
+	--tfh-radius-circle: 999px;
+
+	--tfh-border: 1px solid var(--tfh-grey-100);
+	--tfh-border-accent: 2px solid var(--tfh-accent);
+
+	--tfh-shadow-sm: 0 1px 2px rgba(11, 34, 58, 0.06);
+	--tfh-shadow-md: 0 10px 30px rgba(11, 34, 58, 0.08);
+	--tfh-shadow-lg: 0 24px 56px rgba(11, 34, 58, 0.14);
+
+	--tfh-transition: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+	--tfh-transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	--tfh-z-header: 100;
+	--tfh-z-drawer: 200;
+	--tfh-z-overlay: 150;
+
+	/* ------------------------------------------------------------------
+	 * Gradients
+	 * ---------------------------------------------------------------- */
+	--tfh-gradient-navy: linear-gradient(180deg, #0F3357 0%, #0B2A4A 100%);
+	--tfh-gradient-accent: linear-gradient(135deg, #FF3B3B 0%, #F60101 60%, #D10101 100%);
+}

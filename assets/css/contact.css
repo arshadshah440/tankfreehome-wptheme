@@ -1,0 +1,210 @@
+/**
+ * Tank Free Home - Contact page
+ * Quick info cards, the contact form + sidebar, and form notices.
+ * Loaded alongside home.css, which supplies the shared section-head and
+ * button styles this template also relies on.
+ */
+
+/* ==========================================================================
+   1. Quick info cards
+   ========================================================================== */
+
+.tfh-contact-info__grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--tfh-space-6);
+}
+
+.tfh-contact-info__card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: var(--tfh-space-8) var(--tfh-space-5);
+	border-radius: var(--tfh-radius-lg);
+	background: var(--tfh-grey-50);
+	text-align: center;
+}
+
+.tfh-contact-info__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	margin-bottom: var(--tfh-space-4);
+	border-radius: var(--tfh-radius-circle);
+	background: var(--tfh-accent-10);
+	color: var(--tfh-accent);
+}
+
+.tfh-contact-info__label {
+	margin-bottom: var(--tfh-space-2);
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-xs);
+	font-weight: var(--tfh-fw-semibold);
+	letter-spacing: var(--tfh-ls-eyebrow);
+	text-transform: uppercase;
+}
+
+.tfh-contact-info__value {
+	color: var(--tfh-ink);
+	font-weight: var(--tfh-fw-semibold);
+	line-height: var(--tfh-lh-snug);
+}
+
+a.tfh-contact-info__value:hover {
+	color: var(--tfh-accent);
+}
+
+@media (max-width: 1024px) {
+	.tfh-contact-info__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 560px) {
+	.tfh-contact-info__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ==========================================================================
+   2. Form notices
+   ========================================================================== */
+
+.tfh-form-notice {
+	max-width: 720px;
+	margin: 0 auto var(--tfh-space-8);
+	padding: var(--tfh-space-4) var(--tfh-space-5);
+	border-radius: var(--tfh-radius-md);
+	font-weight: var(--tfh-fw-medium);
+	text-align: center;
+}
+
+.tfh-form-notice--success {
+	background: var(--tfh-accent-10);
+	color: var(--tfh-navy);
+}
+
+.tfh-form-notice--error {
+	background: rgba(246, 1, 1, 0.08);
+	color: var(--tfh-accent-dark);
+}
+
+/* ==========================================================================
+   3. Form + sidebar
+   ========================================================================== */
+
+.tfh-contact-form__grid {
+	display: grid;
+	grid-template-columns: 1.3fr 0.9fr;
+	gap: var(--tfh-space-10);
+	align-items: start;
+}
+
+.tfh-contact-form__form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--tfh-space-5);
+	padding: var(--tfh-space-8);
+	border-radius: var(--tfh-radius-xl);
+	background: var(--tfh-grey-50);
+}
+
+.tfh-form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--tfh-space-5);
+}
+
+.tfh-field {
+	display: flex;
+	flex-direction: column;
+	gap: var(--tfh-space-2);
+}
+
+.tfh-field label {
+	color: var(--tfh-ink);
+	font-size: var(--tfh-fs-sm);
+	font-weight: var(--tfh-fw-medium);
+}
+
+.tfh-field__required {
+	color: var(--tfh-accent);
+}
+
+.tfh-field input,
+.tfh-field select,
+.tfh-field textarea {
+	width: 100%;
+	padding: var(--tfh-space-3) var(--tfh-space-4);
+	border: 1px solid var(--tfh-grey-100);
+	border-radius: var(--tfh-radius-sm);
+	background: var(--tfh-white);
+	color: var(--tfh-ink);
+	font-family: inherit;
+	font-size: var(--tfh-fs-body);
+	transition: border-color var(--tfh-transition);
+}
+
+.tfh-field textarea {
+	resize: vertical;
+}
+
+.tfh-field input:focus,
+.tfh-field select:focus,
+.tfh-field textarea:focus {
+	outline: none;
+	border-color: var(--tfh-accent);
+}
+
+.tfh-contact-form__form .tfh-btn {
+	align-self: flex-start;
+}
+
+/* Honeypot: kept in the tab order out of view, never display:none (some bots
+   skip hidden fields, so this stays "visible" to them but off-screen). */
+.tfh-field-hp {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	white-space: nowrap;
+}
+
+.tfh-contact-form__sidebar {
+	padding: var(--tfh-space-8);
+	border-radius: var(--tfh-radius-xl);
+	background: var(--tfh-gradient-navy);
+	color: var(--tfh-white);
+}
+
+.tfh-contact-form__sidebar h3 {
+	margin-bottom: var(--tfh-space-5);
+	color: var(--tfh-white);
+	font-size: var(--tfh-fs-h4);
+}
+
+.tfh-contact-form__rows {
+	display: flex;
+	flex-direction: column;
+	gap: var(--tfh-space-4);
+	margin-bottom: var(--tfh-space-6);
+}
+
+.tfh-contact-form__sidebar .tfh-footer__contact-item {
+	font-size: var(--tfh-fs-body);
+}
+
+@media (max-width: 900px) {
+	.tfh-contact-form__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 560px) {
+	.tfh-form-row {
+		grid-template-columns: 1fr;
+	}
+}

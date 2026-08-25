@@ -1,0 +1,606 @@
+/**
+ * Tank Free Home - Base
+ * Reset, element defaults, layout helpers and WordPress core classes.
+ */
+
+/* ==========================================================================
+   1. Reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: smooth;
+	scroll-padding-top: calc(var(--tfh-header-height) + var(--tfh-topbar-height) + 1rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}
+
+body {
+	margin: 0;
+	background-color: var(--tfh-body-bg);
+	color: var(--tfh-body-color);
+	font-family: var(--tfh-font-sans);
+	font-size: var(--tfh-fs-body);
+	font-weight: var(--tfh-fw-regular);
+	line-height: var(--tfh-lh-body);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body.tfh-menu-open {
+	overflow: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/* Only colour SVGs that don't declare their own fill. The inline icons in
+   inc/icons.php set fill="none" (stroked) or fill="currentColor" (filled),
+   and a blanket `fill: currentColor` here would override those attributes. */
+svg:not([fill]) {
+	fill: currentColor;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--tfh-grey-100);
+	margin: var(--tfh-space-10) 0;
+}
+
+/* ==========================================================================
+   2. Typography
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 var(--tfh-space-4);
+	color: var(--tfh-heading-color);
+	font-family: var(--tfh-font-heading);
+	font-weight: var(--tfh-fw-semibold);
+	line-height: var(--tfh-lh-heading);
+	letter-spacing: var(--tfh-ls-heading);
+}
+
+h1 { font-size: var(--tfh-fs-h1); letter-spacing: var(--tfh-ls-display); }
+h2 { font-size: var(--tfh-fs-h2); }
+h3 { font-size: var(--tfh-fs-h3); }
+h4 { font-size: var(--tfh-fs-h4); }
+h5 { font-size: var(--tfh-fs-h5); }
+h6 { font-size: var(--tfh-fs-h6); }
+
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+pre,
+table {
+	margin: 0 0 var(--tfh-space-5);
+}
+
+p:last-child,
+ul:last-child,
+ol:last-child {
+	margin-bottom: 0;
+}
+
+a {
+	color: var(--tfh-link);
+	text-decoration: none;
+	transition: color var(--tfh-transition);
+}
+
+a:hover,
+a:focus {
+	color: var(--tfh-link-hover);
+}
+
+strong,
+b {
+	font-weight: var(--tfh-fw-semibold);
+}
+
+blockquote {
+	padding-left: var(--tfh-space-5);
+	border-left: var(--tfh-border-accent);
+	color: var(--tfh-ink);
+	font-size: var(--tfh-fs-lead);
+}
+
+code,
+kbd,
+pre {
+	font-family: var(--tfh-font-mono);
+	font-size: 0.9em;
+}
+
+pre {
+	overflow-x: auto;
+	padding: var(--tfh-space-5);
+	border-radius: var(--tfh-radius-md);
+	background: var(--tfh-grey-50);
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: var(--tfh-space-3);
+	border-bottom: var(--tfh-border);
+	text-align: left;
+}
+
+/* ==========================================================================
+   3. Accessibility
+   ========================================================================== */
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+.screen-reader-text:focus {
+	top: 1rem;
+	left: 1rem;
+	z-index: 100000;
+	width: auto;
+	height: auto;
+	clip: auto;
+	clip-path: none;
+	padding: var(--tfh-space-3) var(--tfh-space-5);
+	border-radius: var(--tfh-radius-pill);
+	background: var(--tfh-accent);
+	color: var(--tfh-white);
+	font-weight: var(--tfh-fw-semibold);
+	text-decoration: none;
+}
+
+:focus-visible {
+	outline: 2px solid var(--tfh-focus-ring);
+	outline-offset: 3px;
+}
+
+/* ==========================================================================
+   4. Layout helpers
+   ========================================================================== */
+
+.tfh-container {
+	width: 100%;
+	max-width: calc(var(--tfh-container) + var(--tfh-gutter) * 2);
+	margin-inline: auto;
+	padding-inline: var(--tfh-gutter);
+}
+
+.tfh-container--narrow {
+	max-width: calc(var(--tfh-container-narrow) + var(--tfh-gutter) * 2);
+}
+
+.tfh-section {
+	padding-block: clamp(3rem, 1.5rem + 6vw, 6.5rem);
+}
+
+.tfh-site-main {
+	min-height: 40vh;
+}
+
+/* Section eyebrow - tracked label with a leading vertical rule */
+.tfh-eyebrow {
+	display: inline-flex;
+	align-items: center;
+	margin: 0 0 var(--tfh-space-3);
+	padding-left: var(--tfh-space-3);
+	border-left: 3px solid var(--tfh-eyebrow-border);
+	color: var(--tfh-grey-main);
+	font-size: var(--tfh-fs-eyebrow);
+	font-weight: var(--tfh-fw-semibold);
+	letter-spacing: var(--tfh-ls-eyebrow);
+	line-height: 1.4;
+	text-transform: uppercase;
+}
+
+/* ==========================================================================
+   5. Buttons
+   ========================================================================== */
+
+.tfh-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--tfh-space-2);
+	padding: 14px 26px;
+	border: 2px solid transparent;
+	border-radius: var(--tfh-radius-pill);
+	background-color: var(--tfh-accent);
+	color: var(--tfh-white);
+	font-size: var(--tfh-fs-body);
+	font-weight: var(--tfh-fw-semibold);
+	line-height: 1;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color var(--tfh-transition), color var(--tfh-transition),
+		border-color var(--tfh-transition), transform var(--tfh-transition);
+}
+
+.tfh-btn:hover,
+.tfh-btn:focus {
+	background-color: var(--tfh-accent-dark);
+	color: var(--tfh-white);
+	transform: translateY(-1px);
+}
+
+.tfh-btn--accent {
+	background-color: var(--tfh-accent);
+}
+
+.tfh-btn--navy {
+	background-color: var(--tfh-navy);
+}
+
+.tfh-btn--navy:hover,
+.tfh-btn--navy:focus {
+	background-color: var(--tfh-navy-dark);
+}
+
+.tfh-btn--white {
+	background-color: var(--tfh-white);
+	color: var(--tfh-navy);
+}
+
+.tfh-btn--white:hover,
+.tfh-btn--white:focus {
+	background-color: var(--tfh-grey-50);
+	color: var(--tfh-navy);
+}
+
+.tfh-btn--outline {
+	border-color: rgba(255, 255, 255, 0.6);
+	background-color: transparent;
+	color: var(--tfh-white);
+}
+
+.tfh-btn--outline:hover,
+.tfh-btn--outline:focus {
+	border-color: var(--tfh-white);
+	background-color: var(--tfh-white);
+	color: var(--tfh-navy);
+}
+
+.tfh-btn--outline-accent {
+	border-color: var(--tfh-accent);
+	background-color: transparent;
+	color: var(--tfh-accent);
+}
+
+.tfh-btn--outline-accent:hover,
+.tfh-btn--outline-accent:focus {
+	background-color: var(--tfh-accent);
+	color: var(--tfh-white);
+}
+
+.tfh-btn--sm {
+	padding: 10px 18px;
+	font-size: var(--tfh-fs-sm);
+}
+
+.tfh-btn--block {
+	display: flex;
+	width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Pill button with a trailing circular arrow (services / testimonials CTAs,
+   "See All" links)
+   -------------------------------------------------------------------------- */
+
+.tfh-btn-arrow {
+	--tfh-arrow-color: var(--tfh-accent);
+	--tfh-arrow-contrast: var(--tfh-white);
+
+	display: inline-flex;
+	align-items: center;
+	gap: var(--tfh-space-2);
+	text-decoration: none;
+}
+
+.tfh-btn-arrow__label {
+	color: var(--tfh-arrow-color);
+	font-size: var(--tfh-fs-sm);
+	font-weight: var(--tfh-fw-semibold);
+	line-height: 1;
+	white-space: nowrap;
+}
+
+.tfh-btn-arrow__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	flex: 0 0 32px;
+	border: 1px solid var(--tfh-arrow-color);
+	border-radius: var(--tfh-radius-circle);
+	background: transparent;
+	color: var(--tfh-arrow-color);
+	transition: background-color var(--tfh-transition), color var(--tfh-transition),
+		transform var(--tfh-transition);
+}
+
+.tfh-btn-arrow__icon svg {
+	width: 16px;
+	height: 16px;
+}
+
+.tfh-btn-arrow:hover .tfh-btn-arrow__icon,
+.tfh-btn-arrow:focus-visible .tfh-btn-arrow__icon {
+	background: var(--tfh-arrow-color);
+	color: var(--tfh-arrow-contrast);
+	transform: translateX(2px);
+}
+
+.tfh-btn-arrow--white {
+	--tfh-arrow-color: var(--tfh-white);
+	--tfh-arrow-contrast: var(--tfh-navy);
+}
+
+.tfh-btn-arrow--white .tfh-btn-arrow__label {
+	color: var(--tfh-white);
+}
+
+/* ==========================================================================
+   6. Forms
+   ========================================================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+	width: 100%;
+	padding: 13px 18px;
+	border: var(--tfh-border);
+	border-radius: var(--tfh-radius-md);
+	background: var(--tfh-white);
+	color: var(--tfh-slate);
+	transition: border-color var(--tfh-transition), box-shadow var(--tfh-transition);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: var(--tfh-accent);
+	box-shadow: 0 0 0 3px var(--tfh-accent-10);
+	outline: none;
+}
+
+::placeholder {
+	color: var(--tfh-grey-300);
+	opacity: 1;
+}
+
+/* ==========================================================================
+   7. WordPress core classes
+   ========================================================================== */
+
+.alignleft {
+	float: left;
+	margin: 0 var(--tfh-space-6) var(--tfh-space-4) 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 var(--tfh-space-4) var(--tfh-space-6);
+}
+
+.aligncenter {
+	display: block;
+	margin-inline: auto;
+}
+
+.alignwide {
+	max-width: min(1200px, 100%);
+	margin-inline: auto;
+}
+
+.alignfull {
+	width: 100vw;
+	max-width: 100vw;
+	margin-left: calc(50% - 50vw);
+	margin-right: calc(50% - 50vw);
+}
+
+.wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption-text,
+.wp-block-image figcaption {
+	margin-top: var(--tfh-space-2);
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-sm);
+	text-align: center;
+}
+
+.sticky,
+.bypostauthor {
+	display: block;
+}
+
+.tfh-pagination {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--tfh-space-2);
+	justify-content: center;
+	margin-top: var(--tfh-space-12);
+}
+
+.tfh-pagination .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 40px;
+	height: 40px;
+	padding-inline: var(--tfh-space-3);
+	border-radius: var(--tfh-radius-circle);
+	background: var(--tfh-grey-50);
+	color: var(--tfh-grey-500);
+	font-weight: var(--tfh-fw-medium);
+}
+
+.tfh-pagination .page-numbers.current,
+.tfh-pagination .page-numbers:hover {
+	background: var(--tfh-accent);
+	color: var(--tfh-white);
+}
+
+/* ==========================================================================
+   8. Entry / archive defaults
+   ========================================================================== */
+
+.tfh-entry {
+	margin-bottom: var(--tfh-space-12);
+}
+
+.tfh-entry__title {
+	font-size: var(--tfh-fs-h3);
+}
+
+.tfh-entry__title a {
+	color: inherit;
+}
+
+.tfh-entry__title a:hover {
+	color: var(--tfh-accent);
+}
+
+.tfh-entry__meta {
+	margin-bottom: var(--tfh-space-3);
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-sm);
+}
+
+.tfh-entry__thumb img {
+	width: 100%;
+	border-radius: var(--tfh-radius-lg);
+	object-fit: cover;
+}
+
+.tfh-grid {
+	display: grid;
+	gap: var(--tfh-space-8);
+	grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/* .tfh-page-header {
+	margin-bottom: var(--tfh-space-10);
+} */
+
+.tfh-page-header__title {
+	font-size: var(--tfh-fs-h2);
+}
+
+.tfh-entry-content > * + * {
+	margin-top: var(--tfh-space-5);
+}
+
+.tfh-entry-content h2,
+.tfh-entry-content h3,
+.tfh-entry-content h4 {
+	margin-top: var(--tfh-space-10);
+}
+
+/* ==========================================================================
+   9. Sidebar, comments, empty states
+   ========================================================================== */
+
+.tfh-sidebar {
+	display: flex;
+	flex-direction: column;
+	gap: var(--tfh-space-8);
+	margin-top: var(--tfh-space-12);
+}
+
+.tfh-sidebar .widget-title {
+	font-size: var(--tfh-fs-h4);
+}
+
+.tfh-sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.tfh-sidebar li + li {
+	margin-top: var(--tfh-space-2);
+}
+
+.tfh-empty-hint {
+	padding: var(--tfh-space-6);
+	border-radius: var(--tfh-radius-md);
+	background: var(--tfh-grey-50);
+	color: var(--tfh-grey-500);
+	font-size: var(--tfh-fs-sm);
+	text-align: center;
+}
+
+.tfh-comments {
+	margin-top: var(--tfh-space-16);
+	padding-top: var(--tfh-space-10);
+	border-top: var(--tfh-border);
+}

@@ -1,0 +1,241 @@
+{
+  "key": "group_tfh_faq",
+  "title": "FAQ Page Sections",
+  "fields": [
+    {
+      "key": "field_tfh_faq_tab_header",
+      "label": "Page Header",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_faq_header_subtitle",
+      "label": "Subtitle",
+      "name": "faq_header_subtitle",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "Shown under the page title in the banner. The title itself comes from the page's own title.",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+
+    {
+      "key": "field_tfh_faq_tab_list",
+      "label": "Questions",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_tfh_faq_list_enable",
+      "label": "Show this section",
+      "name": "faq_list_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Show",
+      "ui_off_text": "Hide"
+    },
+    {
+      "key": "field_tfh_faq_list_eyebrow",
+      "label": "Eyebrow",
+      "name": "faq_list_eyebrow",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_faq_list_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "FAQ",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_faq_list_title",
+      "label": "Title",
+      "name": "faq_list_title",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_faq_list_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "70", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "Frequently Asked Questions",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_faq_list_title_highlight",
+      "label": "Highlighted words",
+      "name": "faq_list_title_highlight",
+      "aria-label": "",
+      "type": "number",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_faq_list_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "30", "class": "", "id": "" },
+      "default_value": 0,
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "placeholder": "0",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_tfh_faq_list_intro",
+      "label": "Intro text",
+      "name": "faq_list_intro",
+      "aria-label": "",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_faq_list_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "100", "class": "", "id": "" },
+      "default_value": "",
+      "maxlength": "",
+      "rows": 2,
+      "placeholder": "",
+      "new_lines": "br"
+    },
+    {
+      "key": "field_tfh_faq_categories",
+      "label": "Categories",
+      "name": "faq_categories",
+      "aria-label": "",
+      "type": "repeater",
+      "instructions": "Each category becomes a jump link at the top of the page and a group of questions below.",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_tfh_faq_list_enable", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "layout": "block",
+      "pagination": 0,
+      "min": 0,
+      "max": 10,
+      "collapsed": "field_tfh_faq_category_name",
+      "button_label": "Add category",
+      "rows_per_page": 20,
+      "sub_fields": [
+        {
+          "key": "field_tfh_faq_category_name",
+          "label": "Category name",
+          "name": "category_name",
+          "aria-label": "",
+          "type": "text",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "100", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "General Questions",
+          "prepend": "",
+          "append": ""
+        },
+        {
+          "key": "field_tfh_faq_category_questions",
+          "label": "Questions",
+          "name": "questions",
+          "aria-label": "",
+          "type": "repeater",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": { "width": "100", "class": "", "id": "" },
+          "layout": "block",
+          "pagination": 0,
+          "min": 0,
+          "max": 20,
+          "collapsed": "field_tfh_faq_item_question",
+          "button_label": "Add question",
+          "rows_per_page": 20,
+          "sub_fields": [
+            {
+              "key": "field_tfh_faq_item_question",
+              "label": "Question",
+              "name": "question",
+              "aria-label": "",
+              "type": "text",
+              "required": 1,
+              "conditional_logic": 0,
+              "wrapper": { "width": "100", "class": "", "id": "" },
+              "default_value": "",
+              "placeholder": "",
+              "prepend": "",
+              "append": ""
+            },
+            {
+              "key": "field_tfh_faq_item_answer",
+              "label": "Answer",
+              "name": "answer",
+              "aria-label": "",
+              "type": "textarea",
+              "required": 1,
+              "conditional_logic": 0,
+              "wrapper": { "width": "100", "class": "", "id": "" },
+              "default_value": "",
+              "rows": 3,
+              "placeholder": "",
+              "new_lines": "wpautop"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "page-faq.php"
+      }
+    ]
+  ],
+  "menu_order": 3,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "Content for every section of the FAQ page template, in order.",
+  "show_in_rest": 0
+}

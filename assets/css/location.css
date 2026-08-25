@@ -1,0 +1,32 @@
+/**
+ * Tank Free Home - Location page
+ * Just the service-area city list. Trust stats reuse about.css, Local
+ * Insight reuses about.css + home.css, and the FAQ reuses faq.css (all
+ * loaded alongside this file on this template).
+ */
+
+.tfh-location-area__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--tfh-space-3);
+	max-width: 820px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.tfh-location-area__list li {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--tfh-space-2);
+	padding: var(--tfh-space-2) var(--tfh-space-5);
+	border-radius: var(--tfh-radius-pill);
+	background: var(--tfh-grey-50);
+	color: var(--tfh-ink);
+	font-weight: var(--tfh-fw-medium);
+}
+
+.tfh-location-area__list li svg {
+	color: var(--tfh-accent);
+}
