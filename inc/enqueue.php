@@ -71,6 +71,7 @@ function tfh_enqueue_assets() {
 		$stylesheets['tfh-faq']      = 'assets/css/faq.css';
 		$stylesheets['tfh-services'] = 'assets/css/services.css';
 		$stylesheets['tfh-service']  = 'assets/css/service.css';
+		$stylesheets['tfh-service-flex'] = 'assets/css/service-flex.css';
 	}
 
 	// The Location template reuses the About page's stat-row/values-grid

@@ -66,6 +66,261 @@
             "new_lines": ""
         },
         {
+            "key": "field_tfh_service_content_blocks",
+            "label": "Content Blocks",
+            "name": "service_content_blocks",
+            "aria-label": "",
+            "type": "flexible_content",
+            "instructions": "Reusable sections rendered in order between the Overview and the checklist. Use these for anything the fixed fields below don't cover (highlight lists, cost tables, numbered steps, link lists, free-text blocks).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "100", "class": "", "id": "" },
+            "layouts": {
+                "layout_tfh_fcb_icon_list": {
+                    "key": "layout_tfh_fcb_icon_list",
+                    "name": "icon_list",
+                    "label": "Icon List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tfh_fcb_il_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "type": "text",
+                            "wrapper": { "width": "33" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_il_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "wrapper": { "width": "67" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_il_intro",
+                            "label": "Intro text",
+                            "name": "intro",
+                            "type": "textarea",
+                            "rows": 2,
+                            "new_lines": "br",
+                            "wrapper": { "width": "100" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_il_items",
+                            "label": "Items",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Add item",
+                            "min": 0,
+                            "max": 6,
+                            "collapsed": "field_tfh_fcb_il_item_title",
+                            "sub_fields": [
+                                {
+                                    "key": "field_tfh_fcb_il_item_icon",
+                                    "label": "Icon",
+                                    "name": "icon",
+                                    "type": "select",
+                                    "wrapper": { "width": "20" },
+                                    "choices": {
+                                        "droplet": "Droplet", "home": "Home", "wrench": "Wrench",
+                                        "gauge": "Gauge", "tool": "Tool", "shield-check": "Shield Check",
+                                        "headset": "Headset", "clock": "Clock", "thermometer": "Thermometer",
+                                        "bolt": "Bolt", "flame": "Flame", "check": "Check",
+                                        "settings": "Settings", "award": "Award", "tag": "Tag"
+                                    },
+                                    "default_value": "check",
+                                    "return_format": "value",
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0
+                                },
+                                {
+                                    "key": "field_tfh_fcb_il_item_title",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "text",
+                                    "wrapper": { "width": "35" }
+                                },
+                                {
+                                    "key": "field_tfh_fcb_il_item_text",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "textarea",
+                                    "rows": 2,
+                                    "new_lines": "br",
+                                    "wrapper": { "width": "45" }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "layout_tfh_fcb_text_block": {
+                    "key": "layout_tfh_fcb_text_block",
+                    "name": "text_block",
+                    "label": "Text Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tfh_fcb_tb_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "type": "text",
+                            "wrapper": { "width": "33" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_tb_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "wrapper": { "width": "67" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_tb_body",
+                            "label": "Body",
+                            "name": "body",
+                            "type": "textarea",
+                            "rows": 5,
+                            "new_lines": "",
+                            "instructions": "Blank line = new paragraph.",
+                            "wrapper": { "width": "100" }
+                        }
+                    ]
+                },
+                "layout_tfh_fcb_table": {
+                    "key": "layout_tfh_fcb_table",
+                    "name": "table",
+                    "label": "Table",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tfh_fcb_tbl_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "type": "text",
+                            "wrapper": { "width": "33" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_tbl_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "wrapper": { "width": "67" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_tbl_intro",
+                            "label": "Intro text",
+                            "name": "intro",
+                            "type": "textarea",
+                            "rows": 2,
+                            "new_lines": "br",
+                            "wrapper": { "width": "100" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_tbl_rows",
+                            "label": "Rows",
+                            "name": "rows",
+                            "type": "repeater",
+                            "layout": "table",
+                            "button_label": "Add row",
+                            "min": 0,
+                            "max": 10,
+                            "sub_fields": [
+                                { "key": "field_tfh_fcb_tbl_col1", "label": "Column 1", "name": "col1", "type": "text", "wrapper": { "width": "40" } },
+                                { "key": "field_tfh_fcb_tbl_col2", "label": "Column 2", "name": "col2", "type": "text", "wrapper": { "width": "60" } }
+                            ]
+                        }
+                    ]
+                },
+                "layout_tfh_fcb_steps": {
+                    "key": "layout_tfh_fcb_steps",
+                    "name": "steps",
+                    "label": "Numbered Steps",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tfh_fcb_st_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "type": "text",
+                            "wrapper": { "width": "33" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_st_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "wrapper": { "width": "67" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_st_intro",
+                            "label": "Intro text",
+                            "name": "intro",
+                            "type": "textarea",
+                            "rows": 2,
+                            "new_lines": "br",
+                            "wrapper": { "width": "100" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_st_items",
+                            "label": "Steps",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "block",
+                            "button_label": "Add step",
+                            "min": 0,
+                            "max": 6,
+                            "collapsed": "field_tfh_fcb_st_item_title",
+                            "sub_fields": [
+                                { "key": "field_tfh_fcb_st_item_title", "label": "Title", "name": "title", "type": "text", "wrapper": { "width": "35" } },
+                                { "key": "field_tfh_fcb_st_item_text", "label": "Text", "name": "text", "type": "textarea", "rows": 2, "new_lines": "br", "wrapper": { "width": "65" } }
+                            ]
+                        }
+                    ]
+                },
+                "layout_tfh_fcb_link_list": {
+                    "key": "layout_tfh_fcb_link_list",
+                    "name": "link_list",
+                    "label": "Link List",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_tfh_fcb_ll_eyebrow",
+                            "label": "Eyebrow",
+                            "name": "eyebrow",
+                            "type": "text",
+                            "wrapper": { "width": "33" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_ll_title",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "wrapper": { "width": "67" }
+                        },
+                        {
+                            "key": "field_tfh_fcb_ll_items",
+                            "label": "Links",
+                            "name": "items",
+                            "type": "repeater",
+                            "layout": "table",
+                            "button_label": "Add link",
+                            "min": 0,
+                            "max": 12,
+                            "sub_fields": [
+                                { "key": "field_tfh_fcb_ll_label", "label": "Label", "name": "label", "type": "text", "wrapper": { "width": "50" } },
+                                { "key": "field_tfh_fcb_ll_url", "label": "URL", "name": "url", "type": "text", "wrapper": { "width": "50" } }
+                            ]
+                        }
+                    ]
+                }
+            },
+            "button_label": "Add content block",
+            "min": 0,
+            "max": 0
+        },
+        {
             "key": "field_tfh_service_whats_included",
             "label": "What's Included",
             "name": "service_whats_included",
@@ -221,6 +476,49 @@
                     "new_lines": "br"
                 }
             ]
+        },
+        {
+            "key": "field_tfh_service_tab_seo",
+            "label": "SEO",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "", "class": "", "id": "" },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_tfh_service_seo_title",
+            "label": "SEO Title",
+            "name": "service_seo_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Overrides the browser tab / search result title. Falls back to the page title if left empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_tfh_service_seo_description",
+            "label": "Meta Description",
+            "name": "service_seo_description",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Shown in search engine results. Falls back to the excerpt if left empty.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": { "width": "50", "class": "", "id": "" },
+            "default_value": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
         }
     ],
     "location": [

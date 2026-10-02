@@ -25,7 +25,7 @@ get_header();
  */
 $tfh_service_sections = apply_filters(
 	'tfh_single_service_sections',
-	array( 'service_overview', 'service_checklist', 'service_signs' )
+	array( 'service_overview', 'service_flexible', 'service_checklist', 'service_signs' )
 );
 ?>
 

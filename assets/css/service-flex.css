@@ -1,0 +1,88 @@
+/**
+ * Tank Free Home - Single Service flexible content blocks.
+ * icon_list / steps layouts reuse .tfh-service-card / .tfh-process__* from
+ * home.css + services.css (already loaded on this template). Only table and
+ * link_list need their own rules here.
+ */
+
+.tfh-flex-table__grid {
+	display: flex;
+	flex-direction: column;
+	border-radius: var(--tfh-radius-lg);
+	overflow: hidden;
+	border: 1px solid var(--tfh-grey-100);
+}
+
+.tfh-flex-table__row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tfh-flex-table__row:nth-child(odd) {
+	background: var(--tfh-grey-50);
+}
+
+.tfh-flex-table__col1,
+.tfh-flex-table__col2 {
+	padding: var(--tfh-space-4) var(--tfh-space-5);
+}
+
+.tfh-flex-table__col1 {
+	flex: 0 0 40%;
+	font-weight: var(--tfh-fw-semibold);
+	color: var(--tfh-ink);
+	border-right: 1px solid var(--tfh-grey-100);
+}
+
+.tfh-flex-table__col2 {
+	flex: 1 1 0;
+	color: var(--tfh-grey-500);
+}
+
+@media (max-width: 560px) {
+	.tfh-flex-table__row {
+		flex-direction: column;
+	}
+
+	.tfh-flex-table__col1 {
+		border-right: 0;
+		border-bottom: 1px solid var(--tfh-grey-100);
+	}
+}
+
+.tfh-flex-links__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--tfh-space-3);
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.tfh-flex-links__list a {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--tfh-space-2);
+	padding: var(--tfh-space-3) var(--tfh-space-5);
+	border-radius: var(--tfh-radius-pill);
+	background: var(--tfh-grey-50);
+	color: var(--tfh-ink);
+	font-weight: var(--tfh-fw-medium);
+	transition: background-color var(--tfh-transition), color var(--tfh-transition);
+}
+
+.tfh-flex-links__list a:hover {
+	background: var(--tfh-accent);
+	color: var(--tfh-white);
+}
+
+.tfh-flex-links__list a svg {
+	color: var(--tfh-accent);
+	transition: color var(--tfh-transition);
+}
+
+.tfh-flex-links__list a:hover svg {
+	color: var(--tfh-white);
+}

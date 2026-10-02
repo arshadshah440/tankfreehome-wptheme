@@ -30,6 +30,7 @@ function tfh_load_modules() {
 		'post-types',     // Service, Testimonial and Project custom post types.
 		'template-tags',  // Reusable template helpers.
 		'scf',            // Secure Custom Fields options pages + JSON sync.
+		'seo',            // Per-entry SEO title / meta description overrides.
 		'defaults',       // Fallback content used before fields are filled in.
 		'contact-form',   // Contact page form submission handler.
 	);
